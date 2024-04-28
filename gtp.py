@@ -8,4 +8,10 @@ client = OpenAI(
 OpenAI.api_key = 'sk-proj-6JvbCHlmMJrr2lNjMG8aT3BlbkFJ9J5ONsGpWQ9GJbjdBnp4'
 
 
+
+
+
+
+
+
 print(OpenAI.api_key)
