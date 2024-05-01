@@ -40,23 +40,17 @@ morse_dict = {
 }
 
 while True:
-    #command: str = input('Arduino Command: (ON/OFF): ').upper()
     word: str = input('Ingrese su palabra: ').upper()
-    
-    word_list = ""
-    
-    
-    for i in word:
-        for j in morse_dict:
-            if(i == j):
-                #palabra = morse_dict[j] + palabra
-                serial_inst.write(morse_dict[j].encode('utf-8'))
-    
-    #print(word_list)
-    
-    #serial_inst.write(word_list.encode('utf-8'))
+    morse_word = ""
 
-    #if command == 'EXIT':
-        #exit(0)
-        
-    print("2")
+    # Construir la secuencia de morse para la palabra
+    for char in word:
+        if char in morse_dict:
+            morse_word += morse_dict[char] + ""
+    
+    print(morse_word)
+    # Enviar la secuencia de morse a través del puerto serial
+    serial_inst.write(morse_word.encode('utf-8'))
+
+# Cerrar la conexión serial al finalizar
+#serial_inst.close()
