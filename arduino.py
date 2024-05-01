@@ -49,9 +49,7 @@ while True:
     for i in word:
         for j in morse_dict:
             if(i == j):
-                #word_list = word_list + morse_dict[j]
-                #print(morse_dict[j])
-                palabra = morse_dict[j]
+                #palabra = morse_dict[j] + palabra
                 serial_inst.write(morse_dict[j].encode('utf-8'))
     
     #print(word_list)
@@ -60,3 +58,5 @@ while True:
 
     #if command == 'EXIT':
         #exit(0)
+        
+    print("2")
